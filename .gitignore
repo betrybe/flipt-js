@@ -4,8 +4,11 @@
 # Finder's configuration files (Mac).
 .DS_Store
 
+# Bundle distribution folder
+**/dist
+
 # Node.js modules.
-node_modules/
+**/node_modules
 
 # Log's files.
 *.log

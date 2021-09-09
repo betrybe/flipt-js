@@ -1,13 +1,9 @@
 {
-  "name": "@betrybe/flipt-react",
+  "name": "@betrybe/flipt-js",
   "version": "0.0.1",
-  "description": "",
+  "description": "This library intends to be a Flipt client to React projects, enabling components rendering based on Feature Flags.",
   "main": "dist/index.js",
   "scripts": {
-    "test": "npm run test:lint && npm run test:unit",
-    "test:lint": "eslint \"*/**/*.{ts,js,json}\"",
-    "test:unit": "jest",
-    "lint": "eslint \"*/**/*.{ts,js,json}\" --fix"
   },
   "repository": {
     "type": "git",
@@ -24,15 +20,5 @@
     "url": "https://github.com/betrybe/flipt-react/issues"
   },
   "homepage": "https://github.com/betrybe/flipt-react#readme",
-  "devDependencies": {
-    "@types/eslint": "^7.28.0",
-    "@types/jest": "^27.0.1",
-    "@types/react": "^17.0.20",
-    "eslint": "^7.32.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "jest": "^27.1.1",
-    "prettier": "^2.4.0",
-    "typescript": "^4.4.2"
-  }
+  "devDependencies": {}
 }
