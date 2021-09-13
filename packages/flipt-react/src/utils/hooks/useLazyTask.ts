@@ -7,8 +7,8 @@ import useAbortController from './useAbortController';
 import type { State as State } from '../types/State';
 
 /**
- * React.js hook que provê uma função para executar de maneira preguiçosa (lazy)
- * a task e os estados do resultado, carregamento e erro da task.
+ * React.js hook that provides a function to run in a lazy (lazy) way
+ * the task and the task's result, loading and error states. 
  */
 function useLazyTask<T>(task: Task<T>): [() => Promise<void>, State<T>] {
   const mounted = useMounted();

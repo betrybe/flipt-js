@@ -1,5 +1,3 @@
-// @ts-check
-
 import { renderHook, act } from '@testing-library/react-hooks';
 import useAbortController from './useAbortController';
 

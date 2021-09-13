@@ -1,5 +1,8 @@
 import { useCallback, useEffect, useRef } from "react";
 
+/**
+ * React.js hook that returns if the component is mounted
+ */
 function useMounted() {
     const mountedRef = useRef(true);
 

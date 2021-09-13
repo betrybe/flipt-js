@@ -16,7 +16,7 @@ type TaskReducer<Result> = Reducer<State<Result>, Action<Result>>;
  */
 
 /**
- * Objeto com estado inicial da execução das tarefas.
+ * Object with initial state of execution of tasks. 
  * @type {State<any>}
  */
 const INITIAL_STATE = {
@@ -28,7 +28,7 @@ const INITIAL_STATE = {
 };
 
 /**
- * Redutor usado para atualizar os estados da execução das tarefas.
+ * Reducer used to update task execution states.
  */
 function reducer<Result>(currentState: State<Result>, action: Action<Result>): State<Result> {
   const state = { ...currentState };
@@ -58,11 +58,8 @@ function reducer<Result>(currentState: State<Result>, action: Action<Result>): S
 }
 
 /**
- * React.js hook do redutor de tarefas. Ele retorna a tupla com o estado e a
- * função para despachar as ações que atualizam o estado.
- * @param {Partial<State<Result>>} [initialState]
- * @returns {[State<Result>, (action: Action<Result>) => void]}
- * @template Result - Resultado da tarefa.
+ * React.js hook of task reducer. It returns the tuple with the state and the
+ * function to dispatch the actions that update the status.
  */
 function useTaskReducer<Result>(initialState = {}) {
   return useReducer(reducer as TaskReducer<Result>, {
