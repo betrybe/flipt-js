@@ -5,7 +5,12 @@ import type FliptConfig from "./@types/FliptConfig";
 import type Request from "./@types/Request";
 import { BATCH_EVALUATE_ROUTE, EVALUTE_ROUTE } from "./routes";
 
-function createFliptSDK(config: FliptConfig) {
+export type FlipSDKInstance = {
+    evaluate(flagKey: string, entityId: string, context: Context, requestId?: string | undefined): Promise<Evalutation<Context>>;
+    batchEvaluate(requests: Request[], requestId?: string | undefined): Promise<BatchEvalutationResponse<Context>>;
+}
+
+function createFliptSDK(config: FliptConfig): FlipSDKInstance {
     if (!window.fetch)
         throw new Error('This browser doesn\'t support window.fetch()');
 
@@ -30,7 +35,7 @@ function createFliptSDK(config: FliptConfig) {
         .then<Evalutation<typeof context>>(response => response.json())
     }
     
-    function batchEvaluate(requestId: string, requests: Request[]) {
+    function batchEvaluate(requests: Request[], requestId?: string) {
         return customFetch(BATCH_EVALUATE_ROUTE, {
             method: 'POST',
             body: JSON.stringify({
@@ -41,7 +46,7 @@ function createFliptSDK(config: FliptConfig) {
         .then<BatchEvalutationResponse<typeof requests[number]['context']>>(response => response.json())
     }
 
-    return () => ({
+    return ({
         evaluate,
         batchEvaluate
     });
