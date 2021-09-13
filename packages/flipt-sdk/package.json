@@ -1,8 +1,8 @@
 {
   "name": "@betrybe/flipt-sdk",
   "version": "0.0.1",
-  "description": "This library intends to be a Flipt client to React projects, enabling components rendering based on Feature Flags.",
-  "main": ".eslintrc.js",
+  "description": "This library intends to be a Flipt client to JavaScript projects, enabling components rendering based on Feature Flags.",
+  "main": "./dist/index.js",
   "types": "./types/index.d.ts",
   "scripts": {
     "test": "npm run test:lint && npm run test:unit",
