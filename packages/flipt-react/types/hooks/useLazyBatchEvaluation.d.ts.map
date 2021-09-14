@@ -1,0 +1,1 @@
+{"version":3,"file":"useLazyBatchEvaluation.d.ts","sourceRoot":"","sources":["../../src/hooks/useLazyBatchEvaluation.ts"],"names":[],"mappings":"AACA,OAAO,KAAK,gBAAgB,MAAM,2BAA2B,CAAC;AAC9D,OAAO,KAAK,EAAE,OAAO,EAAE,MAAM,oBAAoB,CAAC;AAIlD,iBAAS,sBAAsB,CAAC,QAAQ,EAAE,OAAO,EAAE,EAAE,OAAO,EAAE,IAAI,CAAC,gBAAgB,EAAE,WAAW,CAAC;;;;EAahG;AAED,eAAe,sBAAsB,CAAC"}

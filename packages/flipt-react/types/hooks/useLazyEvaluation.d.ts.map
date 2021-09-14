@@ -1,0 +1,1 @@
+{"version":3,"file":"useLazyEvaluation.d.ts","sourceRoot":"","sources":["../../src/hooks/useLazyEvaluation.ts"],"names":[],"mappings":"AACA,OAAO,KAAK,gBAAgB,MAAM,2BAA2B,CAAC;AAI9D,iBAAS,aAAa,CAAC,OAAO,EAAE,MAAM,EAAE,EAAE,QAAQ,EAAE,OAAO,EAAE,SAAS,EAAE,EAAE,gBAAgB;;;;;EAazF;AAED,eAAe,aAAa,CAAC"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"EvalutationConfig.d.ts","sourceRoot":"","sources":["../../src/types/EvalutationConfig.ts"],"names":[],"mappings":"AAAA,aAAK,gBAAgB,GAAG;IACpB,QAAQ,EAAE,MAAM,CAAC;IACjB,OAAO,EAAE,MAAM,CAAC,MAAM,EAAE,MAAM,CAAC,CAAC;IAChC,SAAS,CAAC,EAAE,MAAM,CAAC;CACtB,CAAA;AAED,eAAe,gBAAgB,CAAC"}
