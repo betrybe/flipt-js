@@ -7,7 +7,7 @@ function useEvaluation(flagKey: string, { entityId, context, requestId }: Evalua
     const fliptContext = useContext(FliptContext);
 
     if (!fliptContext) {
-        throw new Error('useFeature must be used within a FliptContext');
+        throw new Error('useEvaluation must be used within a FliptContext');
     }
 
     const [evaluate, { loading, result, error }] = useLazyTask(useCallback(() => 
