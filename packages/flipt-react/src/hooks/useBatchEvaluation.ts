@@ -1,6 +1,6 @@
 import { FliptContext } from "@/context/FliptProvider";
 import type EvaluationConfig from "@/types/EvalutationConfig";
-import type { Request } from "@betrybe/flipt-sdk";
+import type { Request } from "@trybe/flipt-sdk";
 import useTask from "@/utils/hooks/useTask";
 import { useCallback, useContext } from "react";
 

@@ -11,7 +11,7 @@
     "build": "rollup --config ./config/rollup.config.js"
   },
   "dependencies": {
-    "@betrybe/flipt-sdk": "workspace:^"
+    "@trybe/flipt-sdk": "workspace:^"
   },
   "keywords": [],
   "author": "",

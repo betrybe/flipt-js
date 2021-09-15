@@ -7,8 +7,8 @@ importers:
 
   packages/flipt-react:
     specifiers:
-      '@betrybe/flipt-sdk': workspace:^
       '@testing-library/react-hooks': ^7.0.2
+      '@trybe/flipt-sdk': workspace:^
       '@types/react': ^17.0.20
       '@typescript-eslint/eslint-plugin': ^4.31.1
       '@typescript-eslint/parser': ^4.31.1
@@ -25,7 +25,7 @@ importers:
       rollup-plugin-typescript2: ^0.30.0
       tslib: ^2.3.1
     dependencies:
-      '@betrybe/flipt-sdk': link:../flipt-sdk
+      '@trybe/flipt-sdk': link:../flipt-sdk
     devDependencies:
       '@testing-library/react-hooks': 7.0.2_react-dom@17.0.2+react@17.0.2
       '@types/react': 17.0.20
