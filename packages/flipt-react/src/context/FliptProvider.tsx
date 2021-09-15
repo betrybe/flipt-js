@@ -10,7 +10,7 @@ type FliptProviderProps = {
 
 export const FliptContext = createContext<Omit<FliptProviderProps, 'children'> | null>(null);
 
-function FliptProvider({ children, uri }: FliptProviderProps) {
+function FliptProvider({ children, uri }: Omit<FliptProviderProps, 'flipt'>) {
     const flipt = useMemo(() => createFliptSDK({ uri }), [uri]);
 
     return <FliptContext.Provider value={{ flipt, uri }}>{children}</FliptContext.Provider>

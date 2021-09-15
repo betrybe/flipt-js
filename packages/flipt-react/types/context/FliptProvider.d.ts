@@ -7,6 +7,6 @@ declare type FliptProviderProps = {
     children: ReactNode;
 };
 export declare const FliptContext: React.Context<Omit<FliptProviderProps, "children"> | null>;
-declare function FliptProvider({ children, uri }: FliptProviderProps): JSX.Element;
+declare function FliptProvider({ children, uri }: Omit<FliptProviderProps, 'flipt'>): JSX.Element;
 export default FliptProvider;
 //# sourceMappingURL=FliptProvider.d.ts.map
