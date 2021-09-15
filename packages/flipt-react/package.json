@@ -1,5 +1,5 @@
 {
-  "name": "@betrybe/flipt-react",
+  "name": "@trybe/flipt-react",
   "version": "0.0.1",
   "description": "",
   "main": "./dist/index.js",
