@@ -6,10 +6,10 @@
  * @type {import('prettier').Options}
  */
 const options = {
-    jsxBracketSameLine: true,
-    quoteProps: 'consistent',
-    singleQuote: true,
-    trailingComma: 'all',
+  jsxBracketSameLine: true,
+  quoteProps: 'consistent',
+  singleQuote: true,
+  trailingComma: 'all',
 };
 
 module.exports = options;
