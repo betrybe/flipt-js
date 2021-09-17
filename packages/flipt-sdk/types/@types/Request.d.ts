@@ -1,4 +1,4 @@
-import type Context from "./Context";
+import type Context from './Context';
 declare type Request = {
     request_id: string;
     flag_key: string;
