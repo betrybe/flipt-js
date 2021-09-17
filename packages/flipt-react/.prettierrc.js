@@ -5,6 +5,6 @@
  * An object with Prettier.js options.
  * @type {import('prettier').Options}
  */
- const options = require('../../.prettierrc.js');
+const options = require('../../.prettierrc.js');
 
- module.exports = options;
+module.exports = options;

@@ -16,7 +16,7 @@ type TaskReducer<Result> = Reducer<State<Result>, Action<Result>>;
  */
 
 /**
- * Object with initial state of execution of tasks. 
+ * Object with initial state of execution of tasks.
  * @type {State<any>}
  */
 const INITIAL_STATE = {
@@ -30,7 +30,10 @@ const INITIAL_STATE = {
 /**
  * Reducer used to update task execution states.
  */
-function reducer<Result>(currentState: State<Result>, action: Action<Result>): State<Result> {
+function reducer<Result>(
+  currentState: State<Result>,
+  action: Action<Result>,
+): State<Result> {
   const state = { ...currentState };
 
   switch (action.type) {

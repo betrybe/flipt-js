@@ -1,5 +1,5 @@
 type FliptConfig = {
-    uri: string;
-}
+  uri: string;
+};
 
 export default FliptConfig;

@@ -1,4 +1,3 @@
-
 // @ts-check
 /* eslint-env node */
 
@@ -11,19 +10,19 @@
 const options = {
   extends: ['../../.eslintrc.js', 'plugin:react/recommended'],
   settings: {
-    react: {
-      version: 'detect'
+    'react': {
+      version: 'detect',
     },
     'import/resolver': {
       typescript: {
-        directory: 'packages/flipt-sdk'
-      }
-    }
+        directory: 'packages/flipt-sdk',
+      },
+    },
   },
   rules: { 'react/prop-types': 'off', 'no-shadow': 'off' },
   env: {
-    browser: true
-  }
+    browser: true,
+  },
 };
 
 module.exports = options;

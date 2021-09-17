@@ -20,11 +20,13 @@ describe('useTaskReducer | hook | integration test', () => {
 
   describe('when initializes with a provided state', () => {
     it('returns initial state overwrited by provided state', () => {
-      const { result } = renderHook(() => useTaskReducer({
-        loading: true,
-        runningTasks: 1,
-        wasStartedAtLeastOnce: true,
-      }));
+      const { result } = renderHook(() =>
+        useTaskReducer({
+          loading: true,
+          runningTasks: 1,
+          wasStartedAtLeastOnce: true,
+        }),
+      );
 
       expect(result.current[0]).toEqual({
         error: null,
@@ -122,10 +124,12 @@ describe('useTaskReducer | hook | integration test', () => {
         expect.objectContaining({ result: null }),
       );
 
-      act(() => dispatch({
-        type: ActionTypeEnum.COMPLETED,
-        result: value,
-      }));
+      act(() =>
+        dispatch({
+          type: ActionTypeEnum.COMPLETED,
+          result: value,
+        }),
+      );
 
       expect(result.current[0]).toEqual(
         expect.objectContaining({ result: value }),
@@ -187,7 +191,9 @@ describe('useTaskReducer | hook | integration test', () => {
       });
 
       expect(result.current[0]).toEqual(
-        expect.objectContaining({ error: new Error('Something bad happened.') }),
+        expect.objectContaining({
+          error: new Error('Something bad happened.'),
+        }),
       );
 
       act(() => {
@@ -215,14 +221,14 @@ describe('useTaskReducer | hook | integration test', () => {
         expect.objectContaining({ error: null }),
       );
 
-      act(() => dispatch({
-        error,
-        type: ActionTypeEnum.FAILED,
-      }));
-
-      expect(result.current[0]).toEqual(
-        expect.objectContaining({ error }),
+      act(() =>
+        dispatch({
+          error,
+          type: ActionTypeEnum.FAILED,
+        }),
       );
+
+      expect(result.current[0]).toEqual(expect.objectContaining({ error }));
     });
 
     it("decrements runningTasks and set loading to 'false'", () => {
@@ -306,10 +312,12 @@ describe('useTaskReducer | hook | integration test', () => {
         expect.objectContaining({ error: null }),
       );
 
-      act(() => dispatch({
-        // @ts-ignore
-        type: 'Any other type',
-      }));
+      act(() =>
+        dispatch({
+          // @ts-ignore
+          type: 'Any other type',
+        }),
+      );
 
       expect(result.error).toBeInstanceOf(UnhandledActionTypeError);
     });

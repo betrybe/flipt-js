@@ -4,11 +4,11 @@ import useLazyTask from './useLazyTask';
 
 type UseTaskState = {
   executeTask: () => Promise<void>;
-}
+};
 
 /**
  * React.js hook that immediately executes the task and provides the result states,
- * loading, error and a function to rerun the task. 
+ * loading, error and a function to rerun the task.
  */
 function useTask<T>(task: Task<T>): State<T> & UseTaskState {
   const [executeTask, state] = useLazyTask(task);

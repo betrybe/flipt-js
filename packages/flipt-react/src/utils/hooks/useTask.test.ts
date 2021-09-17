@@ -36,7 +36,7 @@ describe('useTask | hook | integration test', () => {
     it('runs new task', async () => {
       const value = Math.random();
 
-      const initialTask = jest.fn(() => /** @type {Promise<any>} */ (Promise.resolve(value)));
+      const initialTask = jest.fn(() => Promise.resolve(value));
 
       const { result, rerender, waitForNextUpdate } = renderHook(useTask, {
         initialProps: initialTask,
