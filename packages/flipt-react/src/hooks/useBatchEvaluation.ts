@@ -3,11 +3,16 @@ import type EvaluationConfig from '@/types/EvalutationConfig';
 import type { Request } from '@trybe/flipt-sdk';
 import useTask from '@/utils/hooks/useTask';
 import { useCallback, useContext } from 'react';
+import type Evalutation from '@trybe/flipt-sdk/types/@types/Evaluation';
 
 function useBatchEvaluation(
   requests: Request[],
-  options: Pick<EvaluationConfig, 'requestId'>,
-): { loading: boolean; match: boolean; error: unknown } {
+  { requestId }: Pick<EvaluationConfig, 'requestId'>,
+): {
+  loading: boolean;
+  match: Evalutation<Record<string, string>>[];
+  error: unknown;
+} {
   const fliptContext = useContext(FliptContext);
 
   if (!fliptContext) {
@@ -16,8 +21,9 @@ function useBatchEvaluation(
 
   const { loading, result, error } = useTask(
     useCallback(
-      () => fliptContext.flipt.batchEvaluate(requests, options.requestId),
-      [requests, options],
+      ({ signal }) =>
+        fliptContext.flipt.batchEvaluate(requests, { requestId, signal }),
+      [requests],
     ),
   );
 

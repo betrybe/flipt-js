@@ -13,8 +13,11 @@ function useEvaluation(
     throw new Error('useEvaluation must be used within a FliptContext');
   }
 
-  const { loading, result, error } = useTask(() =>
-    fliptContext.flipt.evaluate(flagKey, entityId, context, requestId),
+  const { loading, result, error } = useTask(({ signal }) =>
+    fliptContext.flipt.evaluate(flagKey, entityId, context, {
+      requestId,
+      signal,
+    }),
   );
 
   return { loading, match: result?.match ?? false, error };

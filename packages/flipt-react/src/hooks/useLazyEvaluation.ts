@@ -6,7 +6,12 @@ import { useCallback, useContext } from 'react';
 function useEvaluation(
   flagKey: string,
   { entityId, context, requestId }: EvaluationConfig,
-): { loading: boolean; match: boolean; error: unknown } {
+): {
+  evaluate: () => Promise<void>;
+  loading: boolean;
+  match: boolean;
+  error: unknown;
+} {
   const fliptContext = useContext(FliptContext);
 
   if (!fliptContext) {
@@ -15,7 +20,11 @@ function useEvaluation(
 
   const [evaluate, { loading, result, error }] = useLazyTask(
     useCallback(
-      () => fliptContext.flipt.evaluate(flagKey, entityId, context, requestId),
+      ({ signal }) =>
+        fliptContext.flipt.evaluate(flagKey, entityId, context, {
+          requestId,
+          signal,
+        }),
       [flagKey, entityId, context, requestId],
     ),
   );
