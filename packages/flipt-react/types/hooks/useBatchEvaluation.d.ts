@@ -1,8 +1,9 @@
-import type EvaluationConfig from "@/types/EvalutationConfig";
-import type { Request } from "@trybe/flipt-sdk";
-declare function useBatchEvaluation(requests: Request[], options: Pick<EvaluationConfig, 'requestId'>): {
+import type EvaluationConfig from '@/types/EvaluationConfig';
+import type { Request } from '@trybe/flipt-sdk';
+import type { Evaluation } from '@trybe/flipt-sdk';
+declare function useBatchEvaluation(requests: Request[], config: Pick<EvaluationConfig, 'requestId'>): {
     loading: boolean;
-    match: import("@trybe/flipt-sdk/types/@types/Evaluation").default<import("@trybe/flipt-sdk/types/@types/Context").default>[];
+    match: Evaluation<Record<string, string>>[];
     error: unknown;
 };
 export default useBatchEvaluation;

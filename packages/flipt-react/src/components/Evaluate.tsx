@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import useEvaluation from '@/hooks/useEvaluation';
-import type EvaluationConfig from '@/types/EvalutationConfig';
+import type EvaluationConfig from '@/types/EvaluationConfig';
 
 type EvaluateProps = EvaluationConfig & {
   flagKey: string;

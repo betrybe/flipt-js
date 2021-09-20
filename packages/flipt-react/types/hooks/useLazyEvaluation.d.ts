@@ -1,4 +1,4 @@
-import type EvaluationConfig from "@/types/EvalutationConfig";
+import type EvaluationConfig from '@/types/EvaluationConfig';
 declare function useEvaluation(flagKey: string, { entityId, context, requestId }: EvaluationConfig): {
     evaluate: () => Promise<void>;
     loading: boolean;

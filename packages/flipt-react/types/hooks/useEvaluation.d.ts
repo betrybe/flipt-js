@@ -1,5 +1,5 @@
-import type EvaluationConfig from "@/types/EvalutationConfig";
-declare function useEvaluation(flagKey: string, { entityId, context, requestId }: EvaluationConfig): {
+import type EvaluationConfig from '@/types/EvaluationConfig';
+declare function useEvaluation(flagKey: string, config: EvaluationConfig): {
     loading: boolean;
     match: boolean;
     error: unknown;
