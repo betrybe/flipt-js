@@ -9,6 +9,7 @@ importers:
     specifiers:
       '@testing-library/react-hooks': ^7.0.2
       '@trybe/flipt-sdk': workspace:^
+      '@types/lodash': ^4.14.173
       '@types/react': ^17.0.20
       '@typescript-eslint/eslint-plugin': ^4.31.1
       '@typescript-eslint/parser': ^4.31.1
@@ -17,6 +18,7 @@ importers:
       eslint-plugin-prettier: ^4.0.0
       eslint-plugin-react: ^7.25.1
       jest: ^27.1.1
+      lodash: ^4.17.21
       prettier: ^2.4.0
       react: ^17.0.2
       react-dom: ^17.0.2
@@ -26,8 +28,10 @@ importers:
       tslib: ^2.3.1
     dependencies:
       '@trybe/flipt-sdk': link:../flipt-sdk
+      lodash: 4.17.21
     devDependencies:
       '@testing-library/react-hooks': 7.0.2_react-dom@17.0.2+react@17.0.2
+      '@types/lodash': 4.14.173
       '@types/react': 17.0.20
       '@typescript-eslint/eslint-plugin': 4.31.1_e4d9b33537a8c53b836ea5acacecf302
       '@typescript-eslint/parser': 4.31.1_eslint@7.32.0
@@ -802,6 +806,10 @@ packages:
 
   /@types/json-schema/7.0.9:
     resolution: {integrity: sha512-qcUXuemtEu+E5wZSJHNxUXeCZhAfXKQ41D+duX+VYPde7xyEVZci+/oXKJL13tnRs9lR2pr4fod59GT6/X1/yQ==}
+    dev: true
+
+  /@types/lodash/4.14.173:
+    resolution: {integrity: sha512-vv0CAYoaEjCw/mLy96GBTnRoZrSxkGE0BKzKimdR8P3OzrNYNvBgtW7p055A+E8C31vXNUhWKoFCbhq7gbyhFg==}
     dev: true
 
   /@types/node/16.9.0:
@@ -2961,7 +2969,6 @@ packages:
 
   /lodash/4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
-    dev: true
 
   /loose-envify/1.4.0:
     resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==}

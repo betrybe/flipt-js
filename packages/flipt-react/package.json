@@ -11,13 +11,15 @@
     "build": "rollup --config ./config/rollup.config.js"
   },
   "dependencies": {
-    "@trybe/flipt-sdk": "workspace:^"
+    "@trybe/flipt-sdk": "workspace:^",
+    "lodash": "^4.17.21"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@testing-library/react-hooks": "^7.0.2",
+    "@types/lodash": "^4.14.173",
     "@types/react": "^17.0.20",
     "@typescript-eslint/eslint-plugin": "^4.31.1",
     "@typescript-eslint/parser": "^4.31.1",
