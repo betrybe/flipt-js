@@ -19,10 +19,16 @@ function FliptProvider({
 }: Omit<FliptProviderProps, 'flipt'>): ReactNode {
   const flipt = useMemo(() => createFliptSDK({ uri }), [uri]);
 
+  const value = useMemo(
+    () => ({
+      flipt,
+      uri,
+    }),
+    [flipt, uri],
+  );
+
   return (
-    <FliptContext.Provider value={{ flipt, uri }}>
-      {children}
-    </FliptContext.Provider>
+    <FliptContext.Provider value={value}>{children}</FliptContext.Provider>
   );
 }
 
