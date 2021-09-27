@@ -4,6 +4,13 @@
   "description": "",
   "main": "./dist/index.js",
   "types": "./types/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/betrybe/flipt-js.git"
+  },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
+  },
   "scripts": {
     "test": "npm run test:lint && npm run test:unit",
     "test:lint": "eslint \"*/**/*.{ts,js,json}\"",
