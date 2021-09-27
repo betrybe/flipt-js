@@ -1,5 +1,5 @@
 {
-  "name": "@trybe/flipt-js",
+  "name": "@betrybe/flipt-js",
   "version": "0.0.1",
   "description": "This library intends to be a Flipt client to React projects, enabling components rendering based on Feature Flags.",
   "main": "dist/index.js",
