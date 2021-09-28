@@ -25,3 +25,6 @@ yarn.lock
 .yarn/
 .yarnrc
 .yarnrc.yaml
+
+# NPM config file
+**/.npmrc
