@@ -4,10 +4,7 @@
   "description": "",
   "main": "./dist/index.js",
   "types": "./types/index.d.ts",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/betrybe/flipt-js.git"
-  },
+  "repository": "git://github.com/betrybe/flipt-js.git",
   "publishConfig": {
     "registry":"https://npm.pkg.github.com"
   },
@@ -18,7 +15,7 @@
     "build": "rollup --config ./config/rollup.config.js"
   },
   "dependencies": {
-    "@trybe/flipt-sdk": "workspace:^",
+    "@betrybe/flipt-sdk": "workspace:^",
     "lodash": "^4.17.21"
   },
   "keywords": [],

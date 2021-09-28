@@ -1,6 +1,6 @@
 import type EvaluationConfig from '@/types/EvaluationConfig';
-import type { Request } from '@trybe/flipt-sdk';
-import type Evalutation from '@trybe/flipt-sdk/types/@types/Evaluation';
+import type { Request } from '@betrybe/flipt-sdk';
+import type Evalutation from '@betrybe/flipt-sdk/types/@types/Evaluation';
 declare function useLazyBatchEvaluation(requests: Request[], { requestId }: Pick<EvaluationConfig, 'requestId'>): {
     evaluate: () => Promise<void>;
     loading: boolean;

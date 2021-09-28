@@ -1,5 +1,5 @@
 import React from 'react';
-import { FlipSDKInstance } from '@trybe/flipt-sdk';
+import { FlipSDKInstance } from '@betrybe/flipt-sdk';
 import { ReactNode } from 'react';
 declare type FliptProviderProps = {
     flipt: FlipSDKInstance;

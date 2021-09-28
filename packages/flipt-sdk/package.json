@@ -4,10 +4,7 @@
   "description": "This library intends to be a Flipt client to JavaScript projects, enabling components rendering based on Feature Flags.",
   "main": "./dist/index.js",
   "types": "./types/index.d.ts",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/betrybe/flipt-js.git"
-  },
+  "repository": "git://github.com/betrybe/flipt-js.git",
   "publishConfig": {
     "registry":"https://npm.pkg.github.com"
   },

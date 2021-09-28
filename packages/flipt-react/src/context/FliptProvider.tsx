@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { createFliptSDK, FlipSDKInstance } from '@trybe/flipt-sdk';
+import { createFliptSDK, FlipSDKInstance } from '@betrybe/flipt-sdk';
 import { createContext, ReactNode } from 'react';
 
 type FliptProviderProps = {

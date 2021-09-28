@@ -23,7 +23,7 @@ const banner = `/*!
 function createOutputOptions(options) {
   return {
     banner,
-    name: '@trybe/flipt-sdk',
+    name: '@betrybe/flipt-sdk',
     exports: 'named',
     sourcemap: true,
     ...options,
