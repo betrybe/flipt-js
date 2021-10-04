@@ -1,6 +1,6 @@
 {
   "name": "@betrybe/flipt-react",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "",
   "main": "./dist/index.js",
   "types": "./types/index.d.ts",
@@ -20,7 +20,8 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "homepage": "https://github.com/betrybe/flipt-js/tree/main/packages/flipt-react#readme",
+  "license": "MIT",
   "devDependencies": {
     "@testing-library/react-hooks": "^7.0.2",
     "@types/lodash": "^4.14.173",

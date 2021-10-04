@@ -1,6 +1,6 @@
 {
   "name": "@betrybe/flipt-sdk",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "This library intends to be a Flipt client to JavaScript projects, enabling components rendering based on Feature Flags.",
   "main": "./dist/index.js",
   "types": "./types/index.d.ts",
@@ -17,7 +17,8 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
+  "homepage": "https://github.com/betrybe/flipt-js/tree/main/packages/flipt-sdk#readme",
   "devDependencies": {
     "@types/jest": "^27.0.1",
     "@types/node": "^16.9.0",
