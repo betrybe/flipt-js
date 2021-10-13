@@ -3,15 +3,18 @@ import type EvaluationConfig from '@/types/EvaluationConfig';
 import useLazyTask from '@/utils/hooks/useLazyTask';
 import { useCallback, useContext } from 'react';
 
-function useEvaluation(
-  flagKey: string,
-  { entityId, context, requestId }: EvaluationConfig,
-): {
+type LazyEvaluationResponse = {
   evaluate: () => Promise<void>;
   loading: boolean;
   match: boolean;
+  value: string | null;
   error: unknown;
-} {
+};
+
+function useEvaluation(
+  flagKey: string,
+  { entityId, context, requestId }: EvaluationConfig,
+): LazyEvaluationResponse {
   const fliptContext = useContext(FliptContext);
 
   if (!fliptContext) {
@@ -29,7 +32,13 @@ function useEvaluation(
     ),
   );
 
-  return { evaluate, loading, match: result?.match ?? false, error };
+  return {
+    evaluate,
+    loading,
+    match: result?.match ?? false,
+    value: result?.value ?? null,
+    error,
+  };
 }
 
 export default useEvaluation;

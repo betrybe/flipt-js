@@ -4,10 +4,17 @@ import useTask from '@/utils/hooks/useTask';
 import isEqual from 'lodash/isEqual';
 import { useCallback, useContext, useLayoutEffect, useRef } from 'react';
 
+type EvaluationResponse = {
+  loading: boolean;
+  match: boolean;
+  value: string | null;
+  error: unknown;
+};
+
 function useEvaluation(
   flagKey: string,
   config: EvaluationConfig,
-): { loading: boolean; match: boolean; error: unknown } {
+): EvaluationResponse {
   const fliptContext = useContext(FliptContext);
 
   const latestConfig = useRef(config);
@@ -38,7 +45,12 @@ function useEvaluation(
     ),
   );
 
-  return { loading, match: result?.match ?? false, error };
+  return {
+    loading,
+    match: result?.match ?? false,
+    value: result?.value ?? null,
+    error,
+  };
 }
 
 export default useEvaluation;
