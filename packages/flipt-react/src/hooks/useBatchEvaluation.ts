@@ -6,14 +6,16 @@ import isEqual from 'lodash/isEqual';
 import { useCallback, useContext, useLayoutEffect, useRef } from 'react';
 import type { Evaluation } from '@betrybe/flipt-sdk';
 
-function useBatchEvaluation(
-  requests: Request[],
-  config: Pick<EvaluationConfig, 'requestId'>,
-): {
+type BatchEvaluationResponse = {
   loading: boolean;
   match: Evaluation<Record<string, string>>[];
   error: unknown;
-} {
+};
+
+function useBatchEvaluation(
+  requests: Request[],
+  config: Pick<EvaluationConfig, 'requestId'>,
+): BatchEvaluationResponse {
   const fliptContext = useContext(FliptContext);
 
   const latestConfig = useRef(config);

@@ -5,15 +5,17 @@ import { useCallback, useContext } from 'react';
 import type Evalutation from '@betrybe/flipt-sdk/types/@types/Evaluation';
 import useLazyTask from '@/utils/hooks/useLazyTask';
 
-function useLazyBatchEvaluation(
-  requests: Request[],
-  { requestId }: Pick<EvaluationConfig, 'requestId'>,
-): {
+type LazyBatchEvaluationResponse = {
   evaluate: () => Promise<void>;
   loading: boolean;
   match: Evalutation<Record<string, string>>[];
   error: unknown;
-} {
+};
+
+function useLazyBatchEvaluation(
+  requests: Request[],
+  { requestId }: Pick<EvaluationConfig, 'requestId'>,
+): LazyBatchEvaluationResponse {
   const fliptContext = useContext(FliptContext);
 
   if (!fliptContext) {
