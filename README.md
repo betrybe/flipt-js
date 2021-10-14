@@ -14,4 +14,4 @@ Um monorepositório contendo bibliotecas que tem como foco ser um cliente Flipt 
 
 ## Licença
 
-[MIT](./LICENSE)
+[Apache-2.0](./LICENSE)
