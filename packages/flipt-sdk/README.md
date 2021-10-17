@@ -1,23 +1,23 @@
 # `@betrybe/flipt-sdk`
 
-O `@betrybe/flipt-sdk` tem como foco ser um cliente JavaScript para servidores Flipt, com ele é possível avaliar Feature Flags ativas ou não através de consultas.
+The `@betrybe/flipt-sdk` package is a JavaScript client for Flipt servers, with it you can evaluate if Feature Flags are enabled or not using queries.
 
-## Instalação
+## Installing
 
-Para instalar o `@betrybe/flipt-sdk` é necessário seguir alguns pequenos passos:
+In order to install `@betrybe/flipt-sdk` you'll have to follow these couple of steps:
 
-1. Adicionar ao arquivo `.npmrc` o _registry_ da organização `@betrybe` para o Github Packages.
+1. Add the `@betrybe` registry to the `.npmrc` file for the Github Packages.
 ```
 @betrybe:registry=https://npm.pkg.github.com/
 ```
-2. Instalar o pacote através de seu _package manager_
+2. Install the package using your package manager
 ```bash
-npm i @betrybe/flipt-sdk # caso utilize npm
-yarn @betrybe/flipt-sdk # caso utilize yarn
-pnpm add @betrybe/flipt-sdk # caso utilize pnpm
+npm i @betrybe/flipt-react # if you're using npm
+yarn @betrybe/flipt-react # if you're using yarn
+pnpm add @betrybe/flipt-react # if you're using pnpm
 ```
 
-Com estes passos feitos, é possível utilizar a biblioteca `@betrybe/flipt-sdk`.
+After following these steps, you should be able to use the `@betrybe/flipt-sdk` library.
 
 ## API
 
@@ -27,7 +27,7 @@ Com estes passos feitos, é possível utilizar a biblioteca `@betrybe/flipt-sdk`
 createFliptSDK(config: FliptConfig): FlipSDKInstance;
 ```
 
-Função responsável por instanciar o cliente Flipt, disponibilizando os métodos que realizam a comunicação com o servidor Flipt.
+The function that will instantiate the Flipt client, providing the methods to communicate with the Flipt server.
 
 ### Métodos
 
@@ -37,7 +37,7 @@ Função responsável por instanciar o cliente Flipt, disponibilizando os métod
 evaluate(flagKey: string, entityId: string, context: Context, options: RequestOptions): Promise<Evalutation<Context>>;
 ```
 
-Realiza a avaliação de uma única _flag_.
+Evaluates only one feature flag.
 
 - `batchEvaluate`
 
@@ -45,15 +45,15 @@ Realiza a avaliação de uma única _flag_.
 batchEvaluate(requests: Request[], options: RequestOptions): Promise<BatchEvalutationResponse<Context>>;
 ```
 
-Realiza a avaliação de várias _flags_ através de uma única consulta.
+Evaluates many feature flags with a single query.
 
-## Contribuição
+## Contributing
 
-Para contribuir com o projeto você pode resolver issues levantadas por nós ou outras pessoas em nosso repositório através de PRs. Sinta-se livre para contribuir com o que quiser, toda contribuição é sempre bem-vinda! :)
+To contribute to the project you can solve the issues created by us or other people in our repository through PRs. Feel free to contribute however you want, all contributions are heartly welcomed :)
 
-Para executar o projeto localmente, você precisará instalar o `pnpm`. Para isto basta seguir os passos presentes em sua [documentação oficial](https://pnpm.io/installation).
+To run the project locally, you'll have to install `pnpm`. For that you can follow the steps in its [official documentation](https://pnpm.io/installation).
 
-Com isto feito, basta instalar as dependências do projeto e executar o _script_ de build do pacote.
+With that being done, you'll just have to install the project's dependencies and run the package's `build` script.
 
 ```bash
 pnpm i

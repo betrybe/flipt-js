@@ -1,23 +1,23 @@
 # `@betrybe/flipt-react`
 
-The `@betrybe/flipt-react` package is a React client for Flipt servers, with it you can evaluate if Feature Flags are enabled or not using the available components and hooks.
+O `@betrybe/flipt-react` tem como foco ser um cliente React para servidores Flipt, com ele é possível avaliar Feature Flags ativas ou não através dos componentes e hooks disponíveis.
 
-## Installing
+## Instalação
 
-In order to install `@betrybe/flipt-react` you'll have to follow these couple of steps:
+Para instalar o `@betrybe/flipt-react` é necessário seguir alguns pequenos passos:
 
-1. Add the `@betrybe` registry to the `.npmrc` file for the Github Packages.
+1. Adicionar ao arquivo `.npmrc` o _registry_ da organização `@betrybe` para o Github Packages.
 ```
 @betrybe:registry=https://npm.pkg.github.com/
 ```
-2. Install the package using your package manager
+2. Instalar o pacote através de seu _package manager_
 ```bash
-npm i @betrybe/flipt-react # if you're using npm
-yarn @betrybe/flipt-react # if you're using yarn
-pnpm add @betrybe/flipt-react # if you're using pnpm
+npm i @betrybe/flipt-react # caso utilize npm
+yarn @betrybe/flipt-react # caso utilize yarn
+pnpm add @betrybe/flipt-react # caso utilize pnpm
 ```
 
-After following these steps, you should be able to use the `@betrybe/flipt-react` library.
+Com estes passos feitos, é possível utilizar a biblioteca `@betrybe/flipt-react`.
 
 ## API
 
@@ -68,7 +68,7 @@ useLazyBatchEvaluation(requests: Request[], { requestId }: Pick<EvaluationConfig
 
 
 
-### Components
+### Componentes
 
 - `Evaluate`
 
@@ -83,13 +83,13 @@ function Evaluate({
 }: EvaluateProps): ReactNode
 ```
 
-## Contributing
+## Contribuição
 
-To contribute to the project you can solve the issues created by us or other people in our repository through PRs. Feel free to contribute however you want, all contributions are heartly welcomed :)
+Para contribuir com o projeto você pode resolver issues levantadas por nós ou outras pessoas em nosso repositório através de PRs. Sinta-se livre para contribuir com o que quiser, toda contribuição é sempre bem-vinda! :)
 
-To run the project locally, you'll have to install `pnpm`. For that you can follow the steps in its [official documentation](https://pnpm.io/installation).
+Para executar o projeto localmente, você precisará instalar o `pnpm`. Para isto basta seguir os passos presentes em sua [documentação oficial](https://pnpm.io/installation).
 
-With that being done, you'll just have to install the project's dependencies and run the package's `build` script.
+Com isto feito, basta instalar as dependências do projeto e executar o _script_ de build do pacote.
 
 ```bash
 pnpm i
