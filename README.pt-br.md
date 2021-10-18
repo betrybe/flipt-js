@@ -9,8 +9,8 @@ Um monorepositório contendo bibliotecas que tem como foco ser um cliente Flipt 
 
 | Pacote | Descrição |
 |---|---|
-| [`@betrybe/flipt-react`](./packages/flipt-react/README.md) | Pacote contendo *hooks*, componentes e *Providers* para consultas a servidores Flipt |
-| [`@betrybe/flipt-sdk`](./packages/flipt-sdk/README.md) | Pacote contendo métodos para utilização do Flipt em projetos *JavaScript* |
+| [`@betrybe/flipt-react`](./packages/flipt-react/README.pt-br.md) | Pacote contendo *hooks*, componentes e *Providers* para consultas a servidores Flipt |
+| [`@betrybe/flipt-sdk`](./packages/flipt-sdk/README.pt-br.md) | Pacote contendo métodos para utilização do Flipt em projetos *JavaScript* |
 
 ## Licença
 
