@@ -1,17 +1,17 @@
 # Flipt React ⚛️
 
-Um monorepositório contendo bibliotecas que tem como foco ser um cliente Flipt para projetos JavaScript, incluindo a biblioteca React. Habilitando ou desabilitando a renderização baseada em Feature Flags.
+A monorepo that holds the libraries used as a Flipt client for JavaScript projects, including the React library. Enabling or disabling the features rendering based on Feature Flags.
 
-- 📦 Pacotes distribuídos em ESM, CommonJS e UMD.
-- ⚡️ Leve, _tree-shakeable_ e livre de pacotes _side-effects_.
-- 🔋 Baterias inclusas, não sendo necessária instalação de bibliotecas (tendo apenas na `@betrybe/flipt-react`)
+- 📦 Packages published in ESM, CommonJS and UMD.
+- ⚡️ Lightweight, tree-shakeable and free from packages with side-effects.
+- 🔋 Included batteries, not being necessary to install libraries (only in `@betrybe/flipt-react`)
 
 
-| Pacote | Descrição |
+| Package | Description |
 |---|---|
-| [`@betrybe/flipt-react`](./packages/flipt-react/README.md) | Pacote contendo *hooks*, componentes e *Providers* para consultas a servidores Flipt |
-| [`@betrybe/flipt-sdk`](./packages/flipt-sdk/README.md) | Pacote contendo métodos para utilização do Flipt em projetos *JavaScript* |
+| [`@betrybe/flipt-react`](./packages/flipt-react/README.md) | A package with *hooks*, components and *Providers* used to query Flipt servers |
+| [`@betrybe/flipt-sdk`](./packages/flipt-sdk/README.md) | A package that holds the methods to use Flipt in *JavaScript* projects |
 
-## Licença
+## License
 
 [Apache-2.0](./LICENSE)
