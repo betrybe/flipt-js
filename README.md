@@ -4,7 +4,7 @@ A monorepo that holds the libraries used as a Flipt client for JavaScript projec
 
 - 📦 Packages published in ESM, CommonJS and UMD.
 - ⚡️ Lightweight, tree-shakeable and free from packages with side-effects.
-- 🔋 Included batteries, not being necessary to install libraries (only in `@betrybe/flipt-react`)
+- 🔋 Batteries included, no additional libraries are required (only `@betrybe/flipt-react`)
 
 
 | Package | Description |
