@@ -1,10 +1,10 @@
-import type { ReactNode } from 'react';
-import useEvaluation from '@/hooks/useEvaluation';
+import type { ReactElement, ReactNode } from 'react';
+import useEvaluation from '../hooks/useEvaluation';
 import type EvaluationConfig from '@/types/EvaluationConfig';
 
 type EvaluateProps = EvaluationConfig & {
   flagKey: string;
-  loading: ReactNode;
+  loading: ReactElement;
   children: ((match: boolean) => ReactNode) | (ReactNode | ReactNode[]);
 };
 
@@ -15,7 +15,7 @@ function Evaluate({
   context,
   entityId,
   requestId,
-}: EvaluateProps): ReactNode {
+}: EvaluateProps): ReactElement | null {
   const { loading, match, error } = useEvaluation(flagKey, {
     context,
     entityId,
@@ -30,7 +30,7 @@ function Evaluate({
 
   if (!match || error) return null;
 
-  return children;
+  return children as ReactElement;
 }
 
 export default Evaluate;
