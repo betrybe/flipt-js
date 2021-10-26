@@ -23,8 +23,12 @@
   "homepage": "https://github.com/betrybe/flipt-js/tree/main/packages/flipt-react#readme",
   "license": "MIT",
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.1.2",
     "@testing-library/react-hooks": "^7.0.2",
+    "@types/jest": "^27.0.1",
     "@types/lodash": "^4.14.173",
+    "@types/node": "^16.9.0",
     "@types/react": "^17.0.20",
     "@typescript-eslint/eslint-plugin": "^4.31.1",
     "@typescript-eslint/parser": "^4.31.1",
@@ -40,6 +44,7 @@
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.30.0",
     "ts-jest": "^27.0.5",
+    "ts-node": "^10.4.0",
     "tslib": "^2.3.1"
   }
 }

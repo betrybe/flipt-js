@@ -9,6 +9,7 @@ const options = {
   preset: 'ts-jest',
   resolver: 'ts-jest-resolver',
   testEnvironment: 'jsdom',
+  setupFilesAfterEnv: ['<rootDir>/jest-setup.ts'],
 };
 
-module.exports = options;
+export default options;
