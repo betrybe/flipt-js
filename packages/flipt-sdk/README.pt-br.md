@@ -7,10 +7,13 @@ O `@betrybe/flipt-sdk` tem como foco ser um cliente JavaScript para servidores F
 Para instalar o `@betrybe/flipt-sdk` é necessário seguir alguns pequenos passos:
 
 1. Adicionar ao arquivo `.npmrc` o _registry_ da organização `@betrybe` para o Github Packages.
+
 ```
 @betrybe:registry=https://npm.pkg.github.com/
 ```
+
 2. Instalar o pacote através de seu _package manager_
+
 ```bash
 npm i @betrybe/flipt-sdk # caso utilize npm
 yarn @betrybe/flipt-sdk # caso utilize yarn

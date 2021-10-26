@@ -1,6 +1,6 @@
 declare type UseAbortControllerAPI = {
-    abort: () => void;
-    signal: AbortSignal;
+  abort: () => void;
+  signal: AbortSignal;
 };
 /**
  * React.js hook that provides the 'abort' function and the 'signal' object, which must be

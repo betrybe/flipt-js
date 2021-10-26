@@ -7,10 +7,13 @@ The `@betrybe/flipt-sdk` package is a JavaScript client for Flipt servers, with 
 In order to install `@betrybe/flipt-sdk` you'll have to follow these couple of steps:
 
 1. Add the `@betrybe` registry to the `.npmrc` file for the Github Packages.
+
 ```
 @betrybe:registry=https://npm.pkg.github.com/
 ```
+
 2. Install the package using your package manager
+
 ```bash
 npm i @betrybe/flipt-react # if you're using npm
 yarn @betrybe/flipt-react # if you're using yarn

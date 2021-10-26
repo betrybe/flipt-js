@@ -7,10 +7,13 @@ O `@betrybe/flipt-react` tem como foco ser um cliente React para servidores Flip
 Para instalar o `@betrybe/flipt-react` é necessário seguir alguns pequenos passos:
 
 1. Adicionar ao arquivo `.npmrc` o _registry_ da organização `@betrybe` para o Github Packages.
+
 ```
 @betrybe:registry=https://npm.pkg.github.com/
 ```
+
 2. Instalar o pacote através de seu _package manager_
+
 ```bash
 npm i @betrybe/flipt-react # caso utilize npm
 yarn @betrybe/flipt-react # caso utilize yarn
@@ -65,9 +68,6 @@ useLazyBatchEvaluation(requests: Request[], { requestId }: Pick<EvaluationConfig
 };
 ```
 
-
-
-
 ### Componentes
 
 - `Evaluate`
@@ -80,7 +80,7 @@ function Evaluate({
   context,
   entityId,
   requestId,
-}: EvaluateProps): ReactNode
+}: EvaluateProps): ReactNode;
 ```
 
 ## Contribuição

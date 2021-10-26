@@ -6,7 +6,7 @@
   "types": "./types/index.d.ts",
   "repository": "git://github.com/betrybe/flipt-js.git",
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com"
   },
   "scripts": {
     "test": "npm run test:lint && npm run test:unit",

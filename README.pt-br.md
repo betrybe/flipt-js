@@ -6,11 +6,10 @@ Um monorepositório contendo bibliotecas que tem como foco ser um cliente Flipt 
 - ⚡️ Leve, _tree-shakeable_ e livre de pacotes _side-effects_.
 - 🔋 Baterias inclusas, não sendo necessária instalação de bibliotecas (tendo apenas na `@betrybe/flipt-react`)
 
-
-| Pacote | Descrição |
-|---|---|
-| [`@betrybe/flipt-react`](./packages/flipt-react/README.pt-br.md) | Pacote contendo *hooks*, componentes e *Providers* para consultas a servidores Flipt |
-| [`@betrybe/flipt-sdk`](./packages/flipt-sdk/README.pt-br.md) | Pacote contendo métodos para utilização do Flipt em projetos *JavaScript* |
+| Pacote                                                           | Descrição                                                                            |
+| ---------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| [`@betrybe/flipt-react`](./packages/flipt-react/README.pt-br.md) | Pacote contendo _hooks_, componentes e _Providers_ para consultas a servidores Flipt |
+| [`@betrybe/flipt-sdk`](./packages/flipt-sdk/README.pt-br.md)     | Pacote contendo métodos para utilização do Flipt em projetos _JavaScript_            |
 
 ## Licença
 

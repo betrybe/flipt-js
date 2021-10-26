@@ -1,4 +1,4 @@
-import type ActionTypeEnum from "../enums/ActionTypeEnum";
+import type ActionTypeEnum from '../enums/ActionTypeEnum';
 
 /** União das ações usadas no 'useTask'. */
 export type Action<Result> =

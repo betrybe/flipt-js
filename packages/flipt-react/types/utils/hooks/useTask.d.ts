@@ -1,6 +1,6 @@
 import type { State } from '../types/State';
 declare type UseTaskState = {
-    executeTask: () => Promise<void>;
+  executeTask: () => Promise<void>;
 };
 /**
  * React.js hook that immediately executes the task and provides the result states,

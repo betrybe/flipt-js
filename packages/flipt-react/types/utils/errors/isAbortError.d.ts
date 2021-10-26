@@ -1,5 +1,5 @@
 declare type AbortError = DOMException & {
-    name: 'AbortError';
+  name: 'AbortError';
 };
 /**
  * Verifies if received error is 'AbortError'.
