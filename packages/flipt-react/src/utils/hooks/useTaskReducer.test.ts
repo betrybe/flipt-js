@@ -314,6 +314,7 @@ describe('useTaskReducer | hook | integration test', () => {
 
       act(() =>
         dispatch({
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
           // @ts-ignore
           type: 'Any other type',
         }),
