@@ -1,6 +1,6 @@
 # Flipt React ⚛️
 
-A monorepo that holds the libraries used as a Flipt client for JavaScript projects, including the React library. Enabling or disabling the features rendering based on Feature Flags.
+A monorepo that holds the libraries used as a [Flipt](https://flipt.io/) client for JavaScript projects, including the React library. Enabling or disabling the features rendering based on Feature Flags.
 
 - 📦 Packages published in ESM, CommonJS and UMD.
 - ⚡️ Lightweight, tree-shakeable and free from packages with side-effects.
