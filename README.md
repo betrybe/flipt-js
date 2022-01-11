@@ -1,4 +1,7 @@
 # Flipt React ⚛️
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 A monorepo that holds the libraries used as a [Flipt](https://flipt.io/) client for JavaScript projects, including the React library. Enabling or disabling the features rendering based on Feature Flags.
 
@@ -14,3 +17,23 @@ A monorepo that holds the libraries used as a [Flipt](https://flipt.io/) client 
 ## License
 
 [Apache-2.0](./LICENSE)
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="http://vitorluizc.github.io"><img src="https://avatars.githubusercontent.com/u/9027363?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vitor Luiz Cavalcanti</b></sub></a><br /><a href="https://github.com/betrybe/flipt-js/commits?author=VitorLuizC" title="Code">💻</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
