@@ -14,10 +14,6 @@ A monorepo that holds the libraries used as a [Flipt](https://flipt.io/) client 
 | [`@betrybe/flipt-react`](./packages/flipt-react/README.md) | A package with _hooks_, components and _Providers_ used to query Flipt servers |
 | [`@betrybe/flipt-sdk`](./packages/flipt-sdk/README.md)     | A package that holds the methods to use Flipt in _JavaScript_ projects         |
 
-## License
-
-[Apache-2.0](./LICENSE)
-
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
@@ -35,5 +31,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- prettier-ignore-end -->
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
+
+## License
+
+[Apache-2.0](./LICENSE)
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
