@@ -6,21 +6,30 @@
   "commit": false,
   "contributors": [
     {
-      "login": "VitorLuizC",
-      "name": "Vitor Luiz Cavalcanti",
-      "avatar_url": "https://avatars.githubusercontent.com/u/9027363?v=4",
-      "profile": "http://vitorluizc.github.io",
-      "contributions": [
-        "code"
-      ]
-    },
-    {
       "login": "ivanrosolen",
       "name": "Ivan Rosolen",
       "avatar_url": "https://avatars.githubusercontent.com/u/226859?v=4",
       "profile": "https://ivanrosolen.com.br",
       "contributions": [
         "doc"
+      ]
+    },
+    {
+      "login": "jliocsar",
+      "name": "Julio Cesar",
+      "avatar_url": "https://avatars.githubusercontent.com/u/60270538?v=4",
+      "profile": "https://github.com/jliocsar",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "VitorLuizC",
+      "name": "Vitor Luiz Cavalcanti",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9027363?v=4",
+      "profile": "http://vitorluizc.github.io",
+      "contributions": [
+        "code"
       ]
     }
   ],
