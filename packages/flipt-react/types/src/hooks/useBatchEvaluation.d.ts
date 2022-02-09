@@ -6,6 +6,6 @@ declare type BatchEvaluationResponse = {
     match: Evaluation<Record<string, string>>[];
     error: unknown;
 };
-declare function useBatchEvaluation(requests: Request[], config: Pick<EvaluationConfig, 'requestId'>): BatchEvaluationResponse;
+declare function useBatchEvaluation(requests: Request[], config: Pick<EvaluationConfig, 'requestId' | 'isAnonymous'>): BatchEvaluationResponse;
 export default useBatchEvaluation;
 //# sourceMappingURL=useBatchEvaluation.d.ts.map
