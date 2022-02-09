@@ -5,6 +5,7 @@ import type FliptConfig from './@types/FliptConfig';
 import type Request from './@types/Request';
 declare type RequestOptions = {
     requestId?: string;
+    isAnonymous?: boolean;
     signal?: AbortSignal | null;
 };
 export declare type FlipSDKInstance = {
