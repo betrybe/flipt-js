@@ -38,6 +38,7 @@ function useEvaluation(
           latestConfig.current.context,
           {
             requestId: latestConfig.current.requestId,
+            isAnonymous: latestConfig.current.isAnonymous, 
             signal,
           },
         ),
