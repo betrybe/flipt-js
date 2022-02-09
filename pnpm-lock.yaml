@@ -7,7 +7,7 @@ importers:
 
   packages/flipt-react:
     specifiers:
-      '@betrybe/flipt-sdk': workspace:^0.0.4
+      '@betrybe/flipt-sdk': workspace:^0.0.6
       '@testing-library/jest-dom': ^5.16.1
       '@testing-library/react': ^12.1.2
       '@testing-library/react-hooks': ^7.0.2
