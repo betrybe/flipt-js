@@ -6,6 +6,6 @@ declare type LazyEvaluationResponse = {
     value: string | null;
     error: unknown;
 };
-declare function useEvaluation(flagKey: string, { entityId, context, requestId }: EvaluationConfig): LazyEvaluationResponse;
+declare function useEvaluation(flagKey: string, { entityId, context, requestId, isAnonymous }: EvaluationConfig): LazyEvaluationResponse;
 export default useEvaluation;
 //# sourceMappingURL=useLazyEvaluation.d.ts.map

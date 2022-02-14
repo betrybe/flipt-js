@@ -7,6 +7,7 @@ import { BATCH_EVALUATE_ROUTE, EVALUTE_ROUTE } from './routes';
 
 type RequestOptions = {
   requestId?: string;
+  isAnonymous?: boolean;
   signal?: AbortSignal | null;
 };
 
@@ -31,34 +32,39 @@ function createFliptSDK(config: FliptConfig): FlipSDKInstance {
     flagKey: string,
     entityId: string,
     context: Context,
-    options: RequestOptions,
+    { requestId, signal, isAnonymous = false }: RequestOptions,
   ) {
     return fetch(config.uri + EVALUTE_ROUTE, {
       headers: {
         'Content-Type': 'application/json',
+        'Anonymous': JSON.stringify(isAnonymous),
       },
       method: 'POST',
       body: JSON.stringify({
-        request_id: options.requestId,
+        request_id: requestId,
         flag_key: flagKey,
         entity_id: entityId,
         context,
       } as Request),
-      signal: options.signal,
+      signal,
     }).then<Evalutation<typeof context>>((response) => response.json());
   }
 
-  function batchEvaluate(requests: Request[], options: RequestOptions) {
+  function batchEvaluate(
+    requests: Request[],
+    { requestId, signal, isAnonymous = false }: RequestOptions,
+  ) {
     return fetch(config.uri + BATCH_EVALUATE_ROUTE, {
       headers: {
         'Content-Type': 'application/json',
+        'Anonymous': JSON.stringify(isAnonymous),
       },
       method: 'POST',
       body: JSON.stringify({
-        request_id: options.requestId,
+        request_id: requestId,
         requests,
       }),
-      signal: options.signal,
+      signal,
     }).then<BatchEvalutationResponse<typeof requests[number]['context']>>(
       (response) => response.json(),
     );

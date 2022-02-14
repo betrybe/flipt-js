@@ -7,6 +7,6 @@ declare type LazyBatchEvaluationResponse = {
     match: Evalutation<Record<string, string>>[];
     error: unknown;
 };
-declare function useLazyBatchEvaluation(requests: Request[], { requestId }: Pick<EvaluationConfig, 'requestId'>): LazyBatchEvaluationResponse;
+declare function useLazyBatchEvaluation(requests: Request[], { requestId, isAnonymous }: Pick<EvaluationConfig, 'requestId' | 'isAnonymous'>): LazyBatchEvaluationResponse;
 export default useLazyBatchEvaluation;
 //# sourceMappingURL=useLazyBatchEvaluation.d.ts.map

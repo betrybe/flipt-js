@@ -14,7 +14,7 @@ type BatchEvaluationResponse = {
 
 function useBatchEvaluation(
   requests: Request[],
-  config: Pick<EvaluationConfig, 'requestId'>,
+  config: Pick<EvaluationConfig, 'requestId' | 'isAnonymous'>,
 ): BatchEvaluationResponse {
   const fliptContext = useContext(FliptContext);
 
@@ -35,6 +35,7 @@ function useBatchEvaluation(
       ({ signal }) =>
         fliptContext.flipt.batchEvaluate(requests, {
           requestId: latestConfig.current.requestId,
+          isAnonymous: latestConfig.current.isAnonymous,
           signal,
         }),
       [requests, latestConfig.current],

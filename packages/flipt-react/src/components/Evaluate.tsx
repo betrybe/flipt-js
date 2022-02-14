@@ -15,11 +15,13 @@ function Evaluate({
   context,
   entityId,
   requestId,
+  isAnonymous,
 }: EvaluateProps): ReactElement | null {
   const { loading, match, error } = useEvaluation(flagKey, {
     context,
     entityId,
     requestId,
+    isAnonymous,
   });
 
   if (loading) return LoadingComponent;

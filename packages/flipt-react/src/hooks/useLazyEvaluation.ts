@@ -13,7 +13,7 @@ type LazyEvaluationResponse = {
 
 function useEvaluation(
   flagKey: string,
-  { entityId, context, requestId }: EvaluationConfig,
+  { entityId, context, requestId, isAnonymous }: EvaluationConfig,
 ): LazyEvaluationResponse {
   const fliptContext = useContext(FliptContext);
 
@@ -27,6 +27,7 @@ function useEvaluation(
         fliptContext.flipt.evaluate(flagKey, entityId, context, {
           requestId,
           signal,
+          isAnonymous,
         }),
       [flagKey, entityId, context, requestId],
     ),

@@ -5,6 +5,6 @@ declare type EvaluateProps = EvaluationConfig & {
     loading: ReactElement;
     children: ((match: boolean) => ReactNode) | (ReactNode | ReactNode[]);
 };
-declare function Evaluate({ children, loading: LoadingComponent, flagKey, context, entityId, requestId, }: EvaluateProps): ReactElement | null;
+declare function Evaluate({ children, loading: LoadingComponent, flagKey, context, entityId, requestId, isAnonymous, }: EvaluateProps): ReactElement | null;
 export default Evaluate;
 //# sourceMappingURL=Evaluate.d.ts.map
