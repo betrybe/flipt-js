@@ -8,6 +8,10 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
+  "files": [
+    "dist/",
+    "types/"
+  ],
   "scripts": {
     "test": "npm run test:lint && npm run test:unit",
     "test:lint": "eslint \"*/**/*.{ts,js,json}\"",
