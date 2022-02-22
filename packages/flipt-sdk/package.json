@@ -1,6 +1,6 @@
 {
   "name": "@betrybe/flipt-sdk",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "This library intends to be a Flipt client to JavaScript projects, enabling components rendering based on Feature Flags and supporting A/B testing.",
   "sideEffects": false,
   "cdn": "./dist/main.umd.js",
@@ -39,7 +39,16 @@
     "lint": "eslint \"*/**/*.{ts,js,json}\" --fix",
     "build": "rollup --config ./config/rollup.config.js"
   },
-  "keywords": ["flipt", "sdk", "feature-flag", "fetch", "typescript", "typescript-types", "type", "types"],
+  "keywords": [
+    "flipt",
+    "sdk",
+    "feature-flag",
+    "fetch",
+    "typescript",
+    "typescript-types",
+    "type",
+    "types"
+  ],
   "author": "",
   "license": "Apache-2.0",
   "homepage": "https://github.com/betrybe/flipt-js/tree/main/packages/flipt-sdk#readme",

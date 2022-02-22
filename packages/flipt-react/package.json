@@ -1,6 +1,6 @@
 {
   "name": "@betrybe/flipt-react",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "This library intends to be a Flipt client to React projects, enabling components rendering based on Feature Flags and supporting A/B testing.",
   "sideEffects": false,
   "cdn": "./dist/main.umd.js",
@@ -39,10 +39,19 @@
     "build": "rollup --config ./config/rollup.config.js"
   },
   "dependencies": {
-    "@betrybe/flipt-sdk": "workspace:^0.0.6",
+    "@betrybe/flipt-sdk": "workspace:^0.0.7",
     "lodash": "^4.17.21"
   },
-  "keywords": ["flipt", "react", "feature-flag", "fetch", "typescript", "typescript-types", "type", "types"],
+  "keywords": [
+    "flipt",
+    "react",
+    "feature-flag",
+    "fetch",
+    "typescript",
+    "typescript-types",
+    "type",
+    "types"
+  ],
   "author": "",
   "homepage": "https://github.com/betrybe/flipt-js/tree/main/packages/flipt-react#readme",
   "license": "Apache-2.0",
