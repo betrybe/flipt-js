@@ -17,7 +17,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "homepage": "https://github.com/betrybe/flipt-js/tree/main/packages/flipt-sdk#readme",
   "devDependencies": {
     "@types/jest": "^27.4.0",
