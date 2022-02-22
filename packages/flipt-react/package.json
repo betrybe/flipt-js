@@ -1,10 +1,30 @@
 {
   "name": "@betrybe/flipt-react",
   "version": "0.0.12",
-  "description": "",
-  "main": "./dist/index.js",
-  "types": "./types/index.d.ts",
-  "repository": "git://github.com/betrybe/flipt-js.git",
+  "description": "This library intends to be a Flipt client to React projects, enabling components rendering based on Feature Flags and supporting A/B testing.",
+  "sideEffects": false,
+  "cdn": "./dist/main.umd.js",
+  "main": "./dist/main.js",
+  "types": "./types/main.d.ts",
+  "unpkg": "./dist/main.umd.js",
+  "module": "./dist/main.esm.js",
+  "jsdelivr": "./dist/main.umd.js",
+  "umd:main": "./dist/main.umd.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/betrybe/flipt-js.git",
+    "directory": "packages/flipt-react"
+  },
+  "exports": {
+    ".": [
+      {
+        "import": "./dist/index.mjs",
+        "require": "./dist/index.js",
+        "default": "./dist/index.js"
+      },
+      "./dist/index.js"
+    ]
+  },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
@@ -22,7 +42,7 @@
     "@betrybe/flipt-sdk": "workspace:^0.0.6",
     "lodash": "^4.17.21"
   },
-  "keywords": [],
+  "keywords": ["flipt", "react", "feature-flag", "fetch", "typescript", "typescript-types", "type", "types"],
   "author": "",
   "homepage": "https://github.com/betrybe/flipt-js/tree/main/packages/flipt-react#readme",
   "license": "Apache-2.0",
