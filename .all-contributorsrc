@@ -40,6 +40,16 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "mateustalles",
+      "name": "Mateus Talles",
+      "avatar_url": "https://avatars.githubusercontent.com/u/39180176?v=4",
+      "profile": "https://github.com/mateustalles",
+      "contributions": [
+        "code",
+        "test"
+      ]
     }
   ],
   "contributorsPerLine": 7,
