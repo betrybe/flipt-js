@@ -12,6 +12,4 @@ const options = {
   setupFiles: ['<rootDir>/setupJest.ts'],
 };
 
-// used 'jsdom' testEnvironment so I can access the window object in the tests
-
 module.exports = options;

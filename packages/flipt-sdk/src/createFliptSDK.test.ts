@@ -1,6 +1,6 @@
 import createFliptSDK from './createFliptSDK';
 
-describe('createFlipSDK | unit test', () => {
+describe('createFlipSDK | function |unit test', () => {
   const mockRequest = {
     request_id: 'string',
     flag_key: 'string',
