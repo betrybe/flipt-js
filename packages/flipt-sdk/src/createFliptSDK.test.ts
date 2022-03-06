@@ -49,6 +49,7 @@ describe('createFlipSDK | function |unit test', () => {
       }),
       headers: {
         'Content-Type': 'application/json',
+        'Anonymous': 'false',
       },
       method: 'POST',
       signal: undefined,
@@ -79,6 +80,7 @@ describe('createFlipSDK | function |unit test', () => {
       }),
       headers: {
         'Content-Type': 'application/json',
+        'Anonymous': 'false',
       },
       method: 'POST',
       signal: undefined,
