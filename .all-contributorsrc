@@ -50,6 +50,16 @@
         "code",
         "test"
       ]
+    },
+    {
+      "login": "tejota",
+      "name": "Olavo G. Junior",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10760183?v=4",
+      "profile": "https://github.com/tejota",
+      "contributions": [
+        "code",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
