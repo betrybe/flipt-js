@@ -19,10 +19,17 @@ function useBatchEvaluation(
   const fliptContext = useContext(FliptContext);
 
   const latestConfig = useRef(config);
+  const latestRequests = useRef(requests);
 
   if (!fliptContext) {
     throw new Error('useEvaluation must be used within a FliptContext');
   }
+
+  useLayoutEffect(() => {
+    if (!isEqual(latestRequests.current, requests)) {
+      latestRequests.current = requests;
+    }
+  }, [requests])
 
   useLayoutEffect(() => {
     if (!isEqual(latestConfig.current, config)) {
@@ -33,12 +40,12 @@ function useBatchEvaluation(
   const { loading, result, error } = useTask(
     useCallback(
       ({ signal }) =>
-        fliptContext.flipt.batchEvaluate(requests, {
+        fliptContext.flipt.batchEvaluate(latestRequests.current, {
           requestId: latestConfig.current.requestId,
           isAnonymous: latestConfig.current.isAnonymous,
           signal,
         }),
-      [requests, latestConfig.current],
+      [latestRequests.current, latestConfig.current],
     ),
   );
 
