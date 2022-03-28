@@ -1,0 +1,71 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "ivanrosolen",
+      "name": "Ivan Rosolen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/226859?v=4",
+      "profile": "https://ivanrosolen.com.br",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "jliocsar",
+      "name": "Julio Cesar",
+      "avatar_url": "https://avatars.githubusercontent.com/u/60270538?v=4",
+      "profile": "https://github.com/jliocsar",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "VitorLuizC",
+      "name": "Vitor Luiz Cavalcanti",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9027363?v=4",
+      "profile": "http://vitorluizc.github.io",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "ItaloPereira",
+      "name": "Italo Pereira",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29663383?v=4",
+      "profile": "https://github.com/ItaloPereira",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "mateustalles",
+      "name": "Mateus Talles",
+      "avatar_url": "https://avatars.githubusercontent.com/u/39180176?v=4",
+      "profile": "https://github.com/mateustalles",
+      "contributions": [
+        "code",
+        "test"
+      ]
+    },
+    {
+      "login": "tejota",
+      "name": "Olavo G. Junior",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10760183?v=4",
+      "profile": "https://github.com/tejota",
+      "contributions": [
+        "code",
+        "bug"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "flipt-js",
+  "projectOwner": "betrybe",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}

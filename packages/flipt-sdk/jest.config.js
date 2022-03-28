@@ -8,6 +8,8 @@
 const options = {
   preset: 'ts-jest',
   resolver: 'ts-jest-resolver',
+  testEnvironment: 'jsdom',
+  setupFiles: ['<rootDir>/setupJest.ts'],
 };
 
 module.exports = options;

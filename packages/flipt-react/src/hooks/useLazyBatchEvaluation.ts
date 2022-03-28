@@ -14,7 +14,7 @@ type LazyBatchEvaluationResponse = {
 
 function useLazyBatchEvaluation(
   requests: Request[],
-  { requestId }: Pick<EvaluationConfig, 'requestId'>,
+  { requestId, isAnonymous }: Pick<EvaluationConfig, 'requestId' | 'isAnonymous'>,
 ): LazyBatchEvaluationResponse {
   const fliptContext = useContext(FliptContext);
 
@@ -27,7 +27,7 @@ function useLazyBatchEvaluation(
   const [evaluate, { loading, result, error }] = useLazyTask(
     useCallback(
       ({ signal }) =>
-        fliptContext.flipt.batchEvaluate(requests, { requestId, signal }),
+        fliptContext.flipt.batchEvaluate(requests, { requestId, signal, isAnonymous }),
       [requests],
     ),
   );
