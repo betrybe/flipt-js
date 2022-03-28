@@ -1,11 +1,11 @@
-import React, { useMemo } from 'react';
+import React, { ReactElement, useMemo } from 'react';
 import { createFliptSDK, FlipSDKInstance } from '@betrybe/flipt-sdk';
 import { createContext, ReactNode } from 'react';
 
 type FliptProviderProps = {
   flipt: FlipSDKInstance;
   uri: string;
-  children: ReactNode;
+  children?: ReactElement;
 };
 
 export const FliptContext = createContext<Omit<
@@ -16,7 +16,7 @@ export const FliptContext = createContext<Omit<
 function FliptProvider({
   children,
   uri,
-}: Omit<FliptProviderProps, 'flipt'>): ReactNode {
+}: Omit<FliptProviderProps, 'flipt'>): ReactElement {
   const flipt = useMemo(() => createFliptSDK({ uri }), [uri]);
 
   const value = useMemo(
