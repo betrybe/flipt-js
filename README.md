@@ -1,6 +1,6 @@
 # Flipt React ⚛️
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 A monorepo that holds the libraries used as a [Flipt](https://flipt.io/) client for JavaScript projects, including the React library. Enabling or disabling the features rendering based on Feature Flags.
@@ -29,6 +29,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/ItaloPereira"><img src="https://avatars.githubusercontent.com/u/29663383?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Italo Pereira</b></sub></a><br /><a href="https://github.com/betrybe/flipt-js/commits?author=ItaloPereira" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/mateustalles"><img src="https://avatars.githubusercontent.com/u/39180176?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mateus Talles</b></sub></a><br /><a href="https://github.com/betrybe/flipt-js/commits?author=mateustalles" title="Code">💻</a> <a href="https://github.com/betrybe/flipt-js/commits?author=mateustalles" title="Tests">⚠️</a></td>
     <td align="center"><a href="https://github.com/tejota"><img src="https://avatars.githubusercontent.com/u/10760183?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Olavo G. Junior</b></sub></a><br /><a href="https://github.com/betrybe/flipt-js/commits?author=tejota" title="Code">💻</a> <a href="https://github.com/betrybe/flipt-js/issues?q=author%3Atejota" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/oAllanWeb"><img src="https://avatars.githubusercontent.com/u/16557802?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Allan da Silva</b></sub></a><br /><a href="https://github.com/betrybe/flipt-js/commits?author=oAllanWeb" title="Code">💻</a> <a href="https://github.com/betrybe/flipt-js/issues?q=author%3AoAllanWeb" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 

@@ -60,6 +60,16 @@
         "code",
         "bug"
       ]
+    },
+    {
+      "login": "oAllanWeb",
+      "name": "Allan da Silva",
+      "avatar_url": "https://avatars.githubusercontent.com/u/16557802?v=4",
+      "profile": "https://github.com/oAllanWeb",
+      "contributions": [
+        "code",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
