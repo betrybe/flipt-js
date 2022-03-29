@@ -1,6 +1,6 @@
-import { FliptContext } from '@/context/FliptProvider';
-import type EvaluationConfig from '@/types/EvaluationConfig';
-import useTask from '@/utils/hooks/useTask';
+import { FliptContext } from '../context/FliptProvider';
+import type EvaluationConfig from '../types/EvaluationConfig';
+import useTask from '../utils/hooks/useTask';
 import isEqual from 'lodash/isEqual';
 import { useCallback, useContext, useLayoutEffect, useRef } from 'react';
 
@@ -38,7 +38,7 @@ function useEvaluation(
           latestConfig.current.context,
           {
             requestId: latestConfig.current.requestId,
-            isAnonymous: latestConfig.current.isAnonymous, 
+            isAnonymous: latestConfig.current.isAnonymous,
             signal,
           },
         ),

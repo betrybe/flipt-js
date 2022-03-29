@@ -1,5 +1,5 @@
 import type { ReactElement, ReactNode } from 'react';
-import type EvaluationConfig from '@/types/EvaluationConfig';
+import type EvaluationConfig from '../types/EvaluationConfig';
 declare type EvaluateProps = EvaluationConfig & {
     flagKey: string;
     loading: ReactElement;
