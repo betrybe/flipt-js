@@ -37,7 +37,7 @@ The function that will instantiate the Flipt client, providing the methods to co
 - `evaluate`
 
 ```typescript
-evaluate(flagKey: string, entityId: string, context: Context, options: RequestOptions): Promise<Evalutation<Context>>;
+evaluate(flagKey: string, entityId: string, context: Context, options: RequestOptions): Promise<evaluation<Context>>;
 ```
 
 Evaluates only one feature flag.
@@ -45,7 +45,7 @@ Evaluates only one feature flag.
 - `batchEvaluate`
 
 ```typescript
-batchEvaluate(requests: Request[], options: RequestOptions): Promise<BatchEvalutationResponse<Context>>;
+batchEvaluate(requests: Request[], options: RequestOptions): Promise<BatchevaluationResponse<Context>>;
 ```
 
 Evaluates many feature flags with a single query.

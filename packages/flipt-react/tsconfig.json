@@ -5,9 +5,6 @@
     "types": ["react", "jest"],
     "jsx": "react",
     "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    },
     "importsNotUsedAsValues": "error"
   },
   "include": ["./src/", "./jest-setup.ts"],

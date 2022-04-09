@@ -1,20 +1,23 @@
-import { FliptContext } from '@/context/FliptProvider';
-import type EvaluationConfig from '@/types/EvaluationConfig';
+import { FliptContext } from '../context/FliptProvider';
+import type EvaluationConfig from '../types/EvaluationConfig';
 import type { Request } from '@betrybe/flipt-sdk';
 import { useCallback, useContext } from 'react';
-import type Evalutation from '@betrybe/flipt-sdk/types/@types/Evaluation';
-import useLazyTask from '@/utils/hooks/useLazyTask';
+import type evaluation from '@betrybe/flipt-sdk/types/@types/Evaluation';
+import useLazyTask from '../utils/hooks/useLazyTask';
 
 type LazyBatchEvaluationResponse = {
   evaluate: () => Promise<void>;
   loading: boolean;
-  match: Evalutation<Record<string, string>>[];
+  match: evaluation<Record<string, string>>[];
   error: unknown;
 };
 
 function useLazyBatchEvaluation(
   requests: Request[],
-  { requestId, isAnonymous }: Pick<EvaluationConfig, 'requestId' | 'isAnonymous'>,
+  {
+    requestId,
+    isAnonymous,
+  }: Pick<EvaluationConfig, 'requestId' | 'isAnonymous'>,
 ): LazyBatchEvaluationResponse {
   const fliptContext = useContext(FliptContext);
 
@@ -27,7 +30,11 @@ function useLazyBatchEvaluation(
   const [evaluate, { loading, result, error }] = useLazyTask(
     useCallback(
       ({ signal }) =>
-        fliptContext.flipt.batchEvaluate(requests, { requestId, signal, isAnonymous }),
+        fliptContext.flipt.batchEvaluate(requests, {
+          requestId,
+          signal,
+          isAnonymous,
+        }),
       [requests],
     ),
   );

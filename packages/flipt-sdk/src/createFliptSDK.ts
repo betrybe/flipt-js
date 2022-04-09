@@ -1,40 +1,35 @@
-import type BatchEvalutationResponse from './@types/BatchEvalutationResponse';
+import type BatchEvaluationResponse from './@types/BatchEvaluationResponse';
 import type Context from './@types/Context';
-import type Evalutation from './@types/Evaluation';
+import type evaluation from './@types/Evaluation';
 import type FliptConfig from './@types/FliptConfig';
 import type Request from './@types/Request';
-import { BATCH_EVALUATE_ROUTE, EVALUTE_ROUTE } from './routes';
-
-type RequestOptions = {
-  requestId?: string;
-  isAnonymous?: boolean;
-  signal?: AbortSignal | null;
-};
+import type RequestOptions from './@types/RequestOptions';
+import { BATCH_EVALUATE_ROUTE, EVALUATE_ROUTE } from './routes';
 
 export type FlipSDKInstance = {
   evaluate(
     flagKey: string,
     entityId: string,
     context: Context,
-    options: RequestOptions,
-  ): Promise<Evalutation<Context>>;
+    options?: RequestOptions,
+  ): Promise<evaluation<Context>>;
   batchEvaluate(
     requests: Request[],
-    options: RequestOptions,
-  ): Promise<BatchEvalutationResponse<Context>>;
+    options?: RequestOptions,
+  ): Promise<BatchEvaluationResponse<Context>>;
 };
 
 function createFliptSDK(config: FliptConfig): FlipSDKInstance {
   if (!window.fetch)
     throw new Error("This browser doesn't support window.fetch()");
 
-  function evaluate(
+  async function evaluate(
     flagKey: string,
     entityId: string,
     context: Context,
     { requestId, signal, isAnonymous = false }: RequestOptions,
   ) {
-    return fetch(config.uri + EVALUTE_ROUTE, {
+    const response = await fetch(config.uri + EVALUATE_ROUTE, {
       headers: {
         'Content-Type': 'application/json',
         'Anonymous': JSON.stringify(isAnonymous),
@@ -47,14 +42,16 @@ function createFliptSDK(config: FliptConfig): FlipSDKInstance {
         context,
       } as Request),
       signal,
-    }).then<Evalutation<typeof context>>((response) => response.json());
+    });
+    const result: evaluation<typeof context> = await response.json();
+    return result;
   }
 
-  function batchEvaluate(
+  async function batchEvaluate(
     requests: Request[],
     { requestId, signal, isAnonymous = false }: RequestOptions,
   ) {
-    return fetch(config.uri + BATCH_EVALUATE_ROUTE, {
+    const response = await fetch(config.uri + BATCH_EVALUATE_ROUTE, {
       headers: {
         'Content-Type': 'application/json',
         'Anonymous': JSON.stringify(isAnonymous),
@@ -65,9 +62,11 @@ function createFliptSDK(config: FliptConfig): FlipSDKInstance {
         requests,
       }),
       signal,
-    }).then<BatchEvalutationResponse<typeof requests[number]['context']>>(
-      (response) => response.json(),
-    );
+    });
+    const result_1: BatchEvaluationResponse<
+      typeof requests[number]['context']
+    > = await response.json();
+    return result_1;
   }
 
   return {

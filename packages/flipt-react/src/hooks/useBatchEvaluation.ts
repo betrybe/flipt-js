@@ -1,7 +1,7 @@
-import { FliptContext } from '@/context/FliptProvider';
-import type EvaluationConfig from '@/types/EvaluationConfig';
+import { FliptContext } from '../context/FliptProvider';
+import type EvaluationConfig from '../types/EvaluationConfig';
 import type { Request } from '@betrybe/flipt-sdk';
-import useTask from '@/utils/hooks/useTask';
+import useTask from '../utils/hooks/useTask';
 import isEqual from 'lodash/isEqual';
 import { useCallback, useContext, useLayoutEffect, useRef } from 'react';
 import type { Evaluation } from '@betrybe/flipt-sdk';
@@ -14,7 +14,7 @@ type BatchEvaluationResponse = {
 
 function useBatchEvaluation(
   requests: Request[],
-  config: Pick<EvaluationConfig, 'requestId' | 'isAnonymous'>,
+  config?: Pick<EvaluationConfig, 'requestId' | 'isAnonymous'>,
 ): BatchEvaluationResponse {
   const fliptContext = useContext(FliptContext);
 
@@ -29,7 +29,7 @@ function useBatchEvaluation(
     if (!isEqual(latestRequests.current, requests)) {
       latestRequests.current = requests;
     }
-  }, [requests])
+  }, [requests]);
 
   useLayoutEffect(() => {
     if (!isEqual(latestConfig.current, config)) {
@@ -41,8 +41,8 @@ function useBatchEvaluation(
     useCallback(
       ({ signal }) =>
         fliptContext.flipt.batchEvaluate(latestRequests.current, {
-          requestId: latestConfig.current.requestId,
-          isAnonymous: latestConfig.current.isAnonymous,
+          requestId: latestConfig.current?.requestId,
+          isAnonymous: latestConfig.current?.isAnonymous,
           signal,
         }),
       [latestRequests.current, latestConfig.current],

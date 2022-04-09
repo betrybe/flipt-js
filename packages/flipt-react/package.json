@@ -1,9 +1,9 @@
 {
   "name": "@betrybe/flipt-react",
-  "version": "0.0.13",
+  "version": "0.0.16",
   "description": "",
   "main": "./dist/index.js",
-  "types": "./types/index.d.ts",
+  "types": "./types/src/index.d.ts",
   "repository": "git://github.com/betrybe/flipt-js.git",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
@@ -21,7 +21,7 @@
   "keywords": [],
   "author": "",
   "homepage": "https://github.com/betrybe/flipt-js/tree/main/packages/flipt-react#readme",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.3",

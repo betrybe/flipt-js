@@ -1,7 +1,6 @@
 import type Context from './Context';
 
-type Evalutation<T extends Context = Context> = {
-  request_id: string;
+type evaluation<T extends Context = Context> = {
   entity_id: string;
   request_context: T;
   match: true;
@@ -10,6 +9,7 @@ type Evalutation<T extends Context = Context> = {
   timestamp: string;
   value: string;
   request_duration_millis: number;
+  request_id: string;
 };
 
-export default Evalutation;
+export default evaluation;

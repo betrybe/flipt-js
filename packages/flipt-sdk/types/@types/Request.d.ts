@@ -1,9 +1,9 @@
 import type Context from './Context';
 declare type Request = {
-    request_id: string;
     flag_key: string;
     entity_id: string;
     context: Context;
+    request_id?: string;
 };
 export default Request;
 //# sourceMappingURL=Request.d.ts.map
