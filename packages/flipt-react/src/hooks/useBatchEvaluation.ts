@@ -4,11 +4,11 @@ import type { Request } from '@betrybe/flipt-sdk';
 import useTask from '../utils/hooks/useTask';
 import isEqual from 'lodash/isEqual';
 import { useCallback, useContext, useLayoutEffect, useRef } from 'react';
-import type { Evaluation } from '@betrybe/flipt-sdk';
+import type { EvaluationResponse } from '@betrybe/flipt-sdk';
 
 type BatchEvaluationResponse = {
   loading: boolean;
-  match: Evaluation<Record<string, string>>[];
+  match: EvaluationResponse<Record<string, string>>[];
   error: unknown;
 };
 

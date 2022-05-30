@@ -1,9 +1,9 @@
 import type Context from './Context';
-import type evaluation from './Evaluation';
+import type EvaluationResponse from './EvaluationResponse';
 
 type BatchEvaluationResponse<T extends Context = Context> = {
   request_id: string;
-  responses: evaluation<T>[];
+  responses: EvaluationResponse<T>[];
   request_duration_millis: 0;
 };
 

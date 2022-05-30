@@ -1,10 +1,21 @@
 import type BatchEvaluationResponse from './@types/BatchEvaluationResponse';
 import type Context from './@types/Context';
-import type evaluation from './@types/Evaluation';
+import type EvaluationResponse from './@types/EvaluationResponse';
 import type FliptConfig from './@types/FliptConfig';
-import type Request from './@types/Request';
-import type RequestOptions from './@types/RequestOptions';
 import { BATCH_EVALUATE_ROUTE, EVALUATE_ROUTE } from './routes';
+
+type RequestOptions = {
+  requestId?: string;
+  isAnonymous?: boolean;
+  signal?: AbortSignal | null;
+};
+
+type Request = {
+  flag_key: string;
+  entity_id: string;
+  context: Context;
+  request_id?: string;
+};
 
 export type FlipSDKInstance = {
   evaluate(
@@ -12,7 +23,7 @@ export type FlipSDKInstance = {
     entityId: string,
     context: Context,
     options?: RequestOptions,
-  ): Promise<evaluation<Context>>;
+  ): Promise<EvaluationResponse<Context>>;
   batchEvaluate(
     requests: Request[],
     options?: RequestOptions,
@@ -43,7 +54,7 @@ function createFliptSDK(config: FliptConfig): FlipSDKInstance {
       } as Request),
       signal,
     });
-    const result: evaluation<typeof context> = await response.json();
+    const result: EvaluationResponse<typeof context> = await response.json();
     return result;
   }
 
