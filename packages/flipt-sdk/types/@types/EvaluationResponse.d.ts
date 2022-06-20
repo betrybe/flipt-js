@@ -1,4 +1,4 @@
-import type Context from './Context';
+import type { Context } from '.';
 declare type EvaluationResponse<T extends Context = Context> = {
     entity_id: string;
     request_context: T;

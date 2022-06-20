@@ -1,4 +1,4 @@
-import type EvaluationConfig from '../types/EvaluationConfig';
+import type EvaluationConfig from '@/types/EvaluationConfig';
 declare type LazyEvaluationResponse = {
     evaluate: () => Promise<void>;
     loading: boolean;

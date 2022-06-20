@@ -37,7 +37,7 @@ Função responsável por instanciar o cliente Flipt, disponibilizando os métod
 - `evaluate`
 
 ```typescript
-evaluate(flagKey: string, entityId: string, context: Context, options: RequestOptions): Promise<evaluation<Context>>;
+evaluate(flagKey: string, entityId: string, context: Context, options: RequestOptions): Promise<Evaluation<Context>>;
 ```
 
 Realiza a avaliação de uma única _flag_.
@@ -45,7 +45,7 @@ Realiza a avaliação de uma única _flag_.
 - `batchEvaluate`
 
 ```typescript
-batchEvaluate(requests: Request[], options: RequestOptions): Promise<BatchevaluationResponse<Context>>;
+batchEvaluate(requests: Request[], options: RequestOptions): Promise<BatchEvaluationResponse<Context>>;
 ```
 
 Realiza a avaliação de várias _flags_ através de uma única consulta.

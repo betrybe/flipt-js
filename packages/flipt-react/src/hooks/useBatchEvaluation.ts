@@ -1,7 +1,7 @@
-import { FliptContext } from '../context/FliptProvider';
-import type EvaluationConfig from '../types/EvaluationConfig';
+import { FliptContext } from '@/context/FliptProvider';
+import type EvaluationConfig from '@/types/EvaluationConfig';
 import type { Request } from '@betrybe/flipt-sdk';
-import useTask from '../utils/hooks/useTask';
+import useTask from '@/utils/hooks/useTask';
 import isEqual from 'lodash/isEqual';
 import { useCallback, useContext, useLayoutEffect, useRef } from 'react';
 import type { EvaluationResponse } from '@betrybe/flipt-sdk';

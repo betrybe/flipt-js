@@ -1,6 +1,5 @@
-import type Context from './Context';
-import type EvaluationResponse from './EvaluationResponse';
-declare type BatchEvaluationResponse<T extends Context = Context> = {
+import type { Context, EvaluationResponse } from '.';
+declare type BatchEvaluationResponse<T extends Context> = {
     request_id: string;
     responses: EvaluationResponse<T>[];
     request_duration_millis: 0;

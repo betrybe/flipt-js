@@ -1,4 +1,4 @@
-import type EvaluationConfig from '../types/EvaluationConfig';
+import type EvaluationConfig from '@/types/EvaluationConfig';
 declare type EvaluationResponse = {
     loading: boolean;
     match: boolean;

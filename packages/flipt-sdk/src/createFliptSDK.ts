@@ -1,21 +1,12 @@
-import type BatchEvaluationResponse from './@types/BatchEvaluationResponse';
-import type Context from './@types/Context';
-import type EvaluationResponse from './@types/EvaluationResponse';
-import type FliptConfig from './@types/FliptConfig';
+import type {
+  BatchEvaluationResponse,
+  Context,
+  EvaluationResponse,
+  FliptConfig,
+  Request,
+  RequestOptions,
+} from './@types';
 import { BATCH_EVALUATE_ROUTE, EVALUATE_ROUTE } from './routes';
-
-type RequestOptions = {
-  requestId?: string;
-  isAnonymous?: boolean;
-  signal?: AbortSignal | null;
-};
-
-type Request = {
-  flag_key: string;
-  entity_id: string;
-  context: Context;
-  request_id?: string;
-};
 
 export type FlipSDKInstance = {
   evaluate(
@@ -74,10 +65,9 @@ function createFliptSDK(config: FliptConfig): FlipSDKInstance {
       }),
       signal,
     });
-    const result_1: BatchEvaluationResponse<
-      typeof requests[number]['context']
-    > = await response.json();
-    return result_1;
+    const result: BatchEvaluationResponse<typeof requests[number]['context']> =
+      await response.json();
+    return result;
   }
 
   return {
