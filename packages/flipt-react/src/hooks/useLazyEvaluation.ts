@@ -1,6 +1,6 @@
-import { FliptContext } from '@/context/FliptProvider';
-import type EvaluationConfig from '@/types/EvaluationConfig';
-import useLazyTask from '@/utils/hooks/useLazyTask';
+import { FliptContext } from '../context/FliptProvider';
+import type EvaluationConfig from '../types/EvaluationConfig';
+import useLazyTask from '../utils/hooks/useLazyTask';
 import { useCallback, useContext } from 'react';
 
 type LazyEvaluationResponse = {

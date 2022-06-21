@@ -1,4 +1,4 @@
-import type EvaluationConfig from '@/types/EvaluationConfig';
+import type EvaluationConfig from '../types/EvaluationConfig';
 import type { Request } from '@betrybe/flipt-sdk';
 import type { EvaluationResponse } from '@betrybe/flipt-sdk';
 declare type LazyBatchEvaluationResponse = {
