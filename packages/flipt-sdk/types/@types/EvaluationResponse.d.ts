@@ -1,5 +1,5 @@
 import type { Context } from '.';
-declare type EvaluationResponse<T extends Context = Context> = {
+declare type EvaluationResponse<T extends Context> = {
     entity_id: string;
     request_context: T;
     match: boolean;
