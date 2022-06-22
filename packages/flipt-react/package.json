@@ -15,7 +15,7 @@
     "build": "rollup --config ./config/rollup.config.js"
   },
   "dependencies": {
-    "@betrybe/flipt-sdk": "workspace:^0.0.7",
+    "@betrybe/flipt-sdk": "workspace:^0.0.8-alpha.1",
     "lodash": "^4.17.21"
   },
   "keywords": [],
