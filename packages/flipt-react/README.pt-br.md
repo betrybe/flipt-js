@@ -29,9 +29,16 @@ Com estes passos feitos, é possível utilizar a biblioteca `@betrybe/flipt-reac
 - `useEvaluation`
 
 ```typescript
-useEvaluation(flagKey: string, config: EvaluationConfig): {
+useEvaluation(
+    flagKey: string, 
+    { 
+        entityId: string,
+        context: Record<string, string>,
+        requestId?
+    }: EvaluationConfig): {
     loading: boolean;
     match: boolean;
+    value: string | null;
     error: unknown;
 };
 ```
@@ -39,18 +46,31 @@ useEvaluation(flagKey: string, config: EvaluationConfig): {
 - `useLazyEvaluation`
 
 ```typescript
-useEvaluation(flagKey: string, { entityId, context, requestId }: EvaluationConfig): {
+useEvaluation(
+    flagKey: string, 
+    { 
+        entityId: string,
+        context: Record<string, string>,
+        requestId?
+    }: EvaluationConfig): {
     evaluate: () => Promise<void>;
     loading: boolean;
     match: boolean;
+    value: string | null;
     error: unknown;
 };
 ```
 
 - `useBatchEvaluation`
-
 ```typescript
-useBatchEvaluation(requests: Request[], config: Pick<EvaluationConfig, 'requestId'>): {
+type Request = {
+  flag_key: string;
+  entity_id: string;
+  context: Context;
+  request_id?: string;
+};
+
+useBatchEvaluation(requests: Request[], config?: Pick<EvaluationConfig, 'requestId'>): {
     loading: boolean;
     match: Evaluation<Record<string, string>>[];
     error: unknown;
@@ -60,10 +80,17 @@ useBatchEvaluation(requests: Request[], config: Pick<EvaluationConfig, 'requestI
 - `useLazyBatchEvaluation`
 
 ```typescript
+type Request = {
+  flag_key: string;
+  entity_id: string;
+  context: Context;
+  request_id?: string;
+};
+
 useLazyBatchEvaluation(requests: Request[], { requestId }: Pick<EvaluationConfig, 'requestId'>): {
     evaluate: () => Promise<void>;
     loading: boolean;
-    match: Evalutation<Record<string, string>>[];
+    match: Evaluation<Record<string, string>>[];
     error: unknown;
 };
 ```

@@ -4,17 +4,17 @@ import type { Request } from '@betrybe/flipt-sdk';
 import useTask from '../utils/hooks/useTask';
 import isEqual from 'lodash/isEqual';
 import { useCallback, useContext, useLayoutEffect, useRef } from 'react';
-import type { Evaluation } from '@betrybe/flipt-sdk';
+import type { EvaluationResponse } from '@betrybe/flipt-sdk';
 
 type BatchEvaluationResponse = {
   loading: boolean;
-  match: Evaluation<Record<string, string>>[];
+  match: EvaluationResponse<Record<string, string>>[];
   error: unknown;
 };
 
 function useBatchEvaluation(
   requests: Request[],
-  config: Pick<EvaluationConfig, 'requestId' | 'isAnonymous'>,
+  config?: Pick<EvaluationConfig, 'requestId' | 'isAnonymous'>,
 ): BatchEvaluationResponse {
   const fliptContext = useContext(FliptContext);
 
@@ -41,8 +41,8 @@ function useBatchEvaluation(
     useCallback(
       ({ signal }) =>
         fliptContext.flipt.batchEvaluate(latestRequests.current, {
-          requestId: latestConfig.current.requestId,
-          isAnonymous: latestConfig.current.isAnonymous,
+          requestId: latestConfig.current?.requestId,
+          isAnonymous: latestConfig.current?.isAnonymous,
           signal,
         }),
       [latestRequests.current, latestConfig.current],

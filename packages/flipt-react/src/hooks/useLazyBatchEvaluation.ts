@@ -2,13 +2,13 @@ import { FliptContext } from '../context/FliptProvider';
 import type EvaluationConfig from '../types/EvaluationConfig';
 import type { Request } from '@betrybe/flipt-sdk';
 import { useCallback, useContext } from 'react';
-import type Evalutation from '@betrybe/flipt-sdk/types/@types/Evaluation';
-import useLazyTask from '../utils/hooks/useLazyTask';
+import type { EvaluationResponse } from '@betrybe/flipt-sdk';
+import useLazyTask from '@/utils/hooks/useLazyTask';
 
 type LazyBatchEvaluationResponse = {
   evaluate: () => Promise<void>;
   loading: boolean;
-  match: Evalutation<Record<string, string>>[];
+  match: EvaluationResponse<Record<string, string>>[];
   error: unknown;
 };
 

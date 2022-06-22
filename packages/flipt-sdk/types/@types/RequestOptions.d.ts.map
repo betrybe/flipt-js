@@ -1,0 +1,1 @@
+{"version":3,"file":"RequestOptions.d.ts","sourceRoot":"","sources":["../../src/@types/RequestOptions.ts"],"names":[],"mappings":"AAAA,aAAK,cAAc,GAAG;IACpB,SAAS,CAAC,EAAE,MAAM,CAAC;IACnB,WAAW,CAAC,EAAE,OAAO,CAAC;IACtB,MAAM,CAAC,EAAE,WAAW,GAAG,IAAI,CAAC;CAC7B,CAAC;AAEF,eAAe,cAAc,CAAC"}

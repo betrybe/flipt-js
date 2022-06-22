@@ -21,7 +21,7 @@
   "keywords": [],
   "author": "",
   "homepage": "https://github.com/betrybe/flipt-js/tree/main/packages/flipt-react#readme",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.3",
