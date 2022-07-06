@@ -1,6 +1,6 @@
 {
   "name": "@betrybe/flipt-sdk",
-  "version": "0.0.8-alpha.1",
+  "version": "0.0.8",
   "description": "This library intends to be a Flipt client to JavaScript projects, enabling components rendering based on Feature Flags.",
   "main": "./dist/index.js",
   "types": "./types/index.d.ts",
