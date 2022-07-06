@@ -1,6 +1,6 @@
 {
   "name": "@betrybe/flipt-react",
-  "version": "0.0.17-alpha.1",
+  "version": "0.0.17",
   "description": "",
   "main": "./dist/index.js",
   "types": "./types/src/index.d.ts",
@@ -15,7 +15,7 @@
     "build": "rollup --config ./config/rollup.config.js"
   },
   "dependencies": {
-    "@betrybe/flipt-sdk": "workspace:^0.0.8-alpha.1",
+    "@betrybe/flipt-sdk": "workspace:^0.0.8",
     "lodash": "^4.17.21"
   },
   "keywords": [],
