@@ -6,7 +6,7 @@ The `@betrybe/flipt-react` package is a React client for Flipt servers, with it 
 
 In order to install `@betrybe/flipt-react` you'll have to follow these couple of steps:
 
-1. Add the `@betrybe` registry to the `.npmrc` file for the Github Packages.
+1. Add the `@betrybe` registry to the `.npmrc` file for the Github Packages. It may be required for you to [authenticate yourself with GitHub](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#authenticating-with-a-personal-access-token).
 
 ```
 @betrybe:registry=https://npm.pkg.github.com/
